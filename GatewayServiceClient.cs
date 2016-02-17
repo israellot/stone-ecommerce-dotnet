@@ -24,6 +24,12 @@ namespace GatewayApiClient {
         /// </summary>
         public ICreditCardResource CreditCard { get { return _creditCard; } }
 
+        private IBuyerResource _buyer;
+        /// <summary>
+        /// Recurso buyer
+        /// </summary>
+        public IBuyerResource Buyer { get { return _buyer; } }
+
         #endregion
 
         public GatewayServiceClient() : this(Guid.Empty, null, null) { }
@@ -33,6 +39,7 @@ namespace GatewayApiClient {
 
             this._sale = new SaleResource(merchantKey, hostUri, customHeaders);
             this._creditCard = new CreditCardResource(merchantKey, hostUri, customHeaders);
+            this._buyer = new BuyerResource(merchantKey, hostUri, customHeaders);
         }
     }
 }

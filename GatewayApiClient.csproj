@@ -93,13 +93,21 @@
     <Compile Include="DataContracts\EnumTypes\SeverityCodeEnum.cs" />
     <Compile Include="DataContracts\ErrorItem.cs" />
     <Compile Include="DataContracts\ErrorReport.cs" />
+    <Compile Include="DataContracts\InstantBuy\CreateInstantBuyDataRequest.cs" />
+    <Compile Include="DataContracts\InstantBuy\CreateInstantBuyDataResponse.cs" />
     <Compile Include="DataContracts\InstantBuy\CreditCardData.cs" />
+    <Compile Include="DataContracts\InstantBuy\DeleteInstantBuyDataResponse.cs" />
     <Compile Include="DataContracts\InstantBuy\GetInstantBuyDataResponse.cs" />
+    <Compile Include="DataContracts\InstantBuy\UpdateInstantBuyDataRequest.cs" />
+    <Compile Include="DataContracts\InstantBuy\UpdateInstantBuyDataResponse.cs" />
     <Compile Include="DataContracts\Merchant\Merchant.cs" />
     <Compile Include="DataContracts\Order\Order.cs" />
     <Compile Include="DataContracts\Order\OrderResult.cs" />
     <Compile Include="DataContracts\Address\BuyerAddress.cs" />
     <Compile Include="DataContracts\Person\Buyer.cs" />
+    <Compile Include="DataContracts\Person\CreateBuyerRequest.cs" />
+    <Compile Include="DataContracts\Person\CreateBuyerResponse.cs" />
+    <Compile Include="DataContracts\Person\GetBuyerData.cs" />
     <Compile Include="DataContracts\Person\Person.cs" />
     <Compile Include="DataContracts\Recurrency\Recurrency.cs" />
     <Compile Include="DataContracts\Sale\SaleOptions.cs" />
@@ -151,8 +159,10 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ResourceClients\BaseResource.cs" />
+    <Compile Include="ResourceClients\BuyerResource.cs" />
     <Compile Include="ResourceClients\CreditCardResource.cs" />
     <Compile Include="ResourceClients\Interfaces\IBaseResource.cs" />
+    <Compile Include="ResourceClients\Interfaces\IBuyerResource.cs" />
     <Compile Include="ResourceClients\Interfaces\ICreditCardResource.cs" />
     <Compile Include="ResourceClients\Interfaces\ISaleResource.cs" />
     <Compile Include="ResourceClients\SaleResource.cs" />

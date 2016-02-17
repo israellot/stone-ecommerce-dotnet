@@ -13,6 +13,11 @@ namespace GatewayApiClient {
         ICreditCardResource CreditCard { get; }
 
         /// <summary>
+        /// Recurso buyer
+        /// </summary>
+        IBuyerResource Buyer { get; }
+
+        /// <summary>
         /// Recurso de venda
         /// </summary>
         ISaleResource Sale { get; }
