@@ -2,6 +2,7 @@
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using GatewayApiClient.DataContracts.EnumTypes;
+using GatewayApiClient.Utility;
 
 namespace GatewayApiClient.DataContracts {
 
@@ -216,14 +217,18 @@ namespace GatewayApiClient.DataContracts {
             get
             {
                 if (this.Birthdate == null) { return null; }
-                return this.Birthdate.Value.ToString(ServiceConstants.DATE_FORMAT);
+                DateTime birthdate;
+                ConfigurationUtility.TryParseDate(this.Birthdate.ToString(), out birthdate, ServiceConstants.DATE_FORMAT, ServiceConstants.DATE_TIME_FORMAT);
+                return birthdate.ToString();
             }
             set
             {
                 if (value == null) {
                     this.Birthdate = null;
                 } else {
-                    this.Birthdate = DateTime.ParseExact(value, ServiceConstants.DATE_FORMAT, null);
+                    DateTime birthdate;
+                    ConfigurationUtility.TryParseDate(value, out birthdate, ServiceConstants.DATE_FORMAT, ServiceConstants.DATE_TIME_FORMAT);
+                    this.Birthdate = birthdate;
                 }
             }
         }
