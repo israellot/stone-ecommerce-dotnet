@@ -73,7 +73,6 @@ namespace GatewayApiClient.Tests {
             FacebookId = "developer.net",
             Gender = GenderEnum.M,
             HomePhone = "2125247689",
-            IpAddress = "192.168.0.1",
             LastBuyerUpdateInMerchant = DateTime.UtcNow.AddDays(-2),
             MobilePhone = "21989685642",
             Name = "Dotnet Developer",
@@ -110,7 +109,7 @@ namespace GatewayApiClient.Tests {
             ExpMonth = 12,
             ExpYear = 2022,
             HolderName = "Ozzy Osbourne",
-            IsOneDollarAuthEnabled = true,
+            IsOneDollarAuthEnabled = false,
             SecurityCode = "123"
         };
         #endregion

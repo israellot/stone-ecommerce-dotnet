@@ -79,9 +79,6 @@ namespace GatewayApiClient.DataContracts {
 
         #endregion
 
-        [DataMember(EmitDefaultValue = false)]
-        public string IpAddress { get; set; }
-
         #region LastBuyerUpdateInMerchant
 
         /// <summary>
